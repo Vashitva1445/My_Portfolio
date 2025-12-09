@@ -1,0 +1,190 @@
+/* -------------------- GLOBAL RESET -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e7f0ff, #f8faff);
+    min-height: 100vh;
+    color: #222;
+}
+
+/* -------------------- NAVBAR -------------------- */
+nav {
+    background: rgba(0, 57, 115, 0.95);
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+nav .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #dfeaff;
+    font-size: 17px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: white;
+    color: #003b73;
+    font-weight: 600;
+}
+
+/* -------------------- PAGE CONTAINER -------------------- */
+.container {
+    width: 85%;
+    margin: 40px auto;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* -------------------- HOME PAGE HERO -------------------- */
+.hero {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    color: #003b73;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #333;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* -------------------- ABOUT IMAGE (FLOAT REQUIREMENT) -------------------- */
+.about-img {
+    float: right;
+    width: 300px;
+    border-radius: 15px;
+    margin-left: 25px;
+    border: 3px solid #003b73;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* -------------------- SKILLS / PROJECT CARDS (FLEXBOX) -------------------- */
+.cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30%;
+    background: #ffffff;
+    border: 2px solid #003b73;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    color: #003b73;
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+/* -------------------- CONTACT FORM -------------------- */
+form {
+    width: 450px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #003b73;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+form label {
+    font-weight: 600;
+    color: #002c5c;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0 25px 0;
+    border: 2px solid #003b73;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+    transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #005ecb;
+    box-shadow: 0 0 8px rgba(0,94,203,0.4);
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #003b73;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #00284f;
+    transform: scale(1.03);
+}
+
+/* -------------------- CLEAR FLOAT for about page -------------------- */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+p{
+    font-size: medium;
+}
+
